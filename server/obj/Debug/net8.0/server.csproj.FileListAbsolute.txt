@@ -58,3 +58,9 @@ C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\obj\
 C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\obj\Debug\net8.0\server.genruntimeconfig.cache
 C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\obj\Debug\net8.0\ref\server.dll
 C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\railway.json
+C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\pub\web.config
+C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\pub\appsettings.Development.json
+C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\pub\appsettings.json
+C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\pub\railway.json
+C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\pub\server.deps.json
+C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\pub\server.runtimeconfig.json
