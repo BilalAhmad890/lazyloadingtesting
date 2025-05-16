@@ -18,4 +18,7 @@ COPY --from=build /app/wwwroot ./wwwroot
 # Set environment variables
 ENV ASPNETCORE_URLS=http://+:${PORT}
 
+# Health check
+HEALTHCHECK --interval=5s --timeout=3s --retries=3 CMD curl -f http://localhost:${PORT}/health || exit 1
+
 ENTRYPOINT ["dotnet", "server.dll"]
