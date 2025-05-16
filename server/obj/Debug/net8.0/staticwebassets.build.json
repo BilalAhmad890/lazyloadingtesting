@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "b2JG4Wem1/E5jSoiu9v3/E0VRW+gtPVU1CM84/YiP3U=",
+  "Source": "server",
+  "BasePath": "_content/server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "server\\wwwroot",
+      "Source": "server",
+      "ContentRoot": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\",
+      "BasePath": "_content/server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\images\\product-1-alt1.png",
+      "SourceId": "server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\",
+      "BasePath": "_content/server",
+      "RelativePath": "images/product-1-alt1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product-1-alt1.png"
+    },
+    {
+      "Identity": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\images\\product-1-alt2.png",
+      "SourceId": "server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\",
+      "BasePath": "_content/server",
+      "RelativePath": "images/product-1-alt2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product-1-alt2.png"
+    },
+    {
+      "Identity": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\images\\product-1.png",
+      "SourceId": "server",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\",
+      "BasePath": "_content/server",
+      "RelativePath": "images/product-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product-1.png"
+    }
+  ]
+}
