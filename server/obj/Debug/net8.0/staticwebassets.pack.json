@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\images\\product-1.png"
     },
     {
+      "Id": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\images\\product-2-alt1.png",
+      "PackagePath": "staticwebassets\\images\\product-2-alt1.png"
+    },
+    {
+      "Id": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\images\\product-2-alt2.png",
+      "PackagePath": "staticwebassets\\images\\product-2-alt2.png"
+    },
+    {
+      "Id": "C:\\Users\\bilal\\Desktop\\FUEC\\examen arbete\\Project\\lazyloadingtesting\\server\\wwwroot\\images\\product-2.png",
+      "PackagePath": "staticwebassets\\images\\product-2.png"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.server.props",
       "PackagePath": "build\\server.props"
     },

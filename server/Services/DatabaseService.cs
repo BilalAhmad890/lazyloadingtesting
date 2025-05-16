@@ -15,32 +15,49 @@ namespace Server.Services
 
         public void InitializeDatabase()
         {
-            _connection.Open();
-            
-            // Create tables if they don't exist
-            _connection.Execute(@"
-                CREATE TABLE IF NOT EXISTS Products (
-                    Id INTEGER PRIMARY KEY,
-                    Title TEXT NOT NULL,
-                    Description TEXT NOT NULL,
-                    Price REAL NOT NULL,
-                    Category TEXT NOT NULL
-                )");
-            
-            _connection.Execute(@"
-                CREATE TABLE IF NOT EXISTS ProductImages (
-                    Id INTEGER PRIMARY KEY,
-                    ProductId INTEGER NOT NULL,
-                    FileName TEXT NOT NULL,
-                    FOREIGN KEY (ProductId) REFERENCES Products(Id)
-                )");
-            
-            // Check if we have any data
-            var productCount = _connection.ExecuteScalar<int>("SELECT COUNT(*) FROM Products");
-            
-            if (productCount == 0)
+            try
             {
-                SeedDatabaseWithSampleData();
+                Console.WriteLine("Opening database connection...");
+                _connection.Open();
+                
+                Console.WriteLine("Creating tables if they don't exist...");
+                // Create tables if they don't exist
+                _connection.Execute(@"
+                    CREATE TABLE IF NOT EXISTS Products (
+                        Id INTEGER PRIMARY KEY,
+                        Title TEXT NOT NULL,
+                        Description TEXT NOT NULL,
+                        Price REAL NOT NULL,
+                        Category TEXT NOT NULL
+                    )");
+                
+                _connection.Execute(@"
+                    CREATE TABLE IF NOT EXISTS ProductImages (
+                        Id INTEGER PRIMARY KEY,
+                        ProductId INTEGER NOT NULL,
+                        FileName TEXT NOT NULL,
+                        FOREIGN KEY (ProductId) REFERENCES Products(Id)
+                    )");
+                
+                // Check if we have any data
+                Console.WriteLine("Checking if database needs to be seeded...");
+                var productCount = _connection.ExecuteScalar<int>("SELECT COUNT(*) FROM Products");
+                
+                if (productCount == 0)
+                {
+                    Console.WriteLine("Seeding database with sample data...");
+                    SeedDatabaseWithSampleData();
+                }
+                else
+                {
+                    Console.WriteLine($"Database already contains {productCount} products.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error initializing database: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
+                throw;
             }
         }
 
@@ -67,26 +84,26 @@ namespace Server.Services
             {
                 var productId = _connection.ExecuteScalar<int>(
                     @"INSERT INTO Products (Title, Description, Price, Category)
-                     VALUES (@Title, @Description, @Price, @Category);
-                     SELECT last_insert_rowid()", product);
+                    VALUES (@Title, @Description, @Price, @Category);
+                    SELECT last_insert_rowid()", product);
                     
                 // Add main image with PNG extension
                 _connection.Execute(
                     @"INSERT INTO ProductImages (ProductId, FileName)
-                     VALUES (@ProductId, @FileName)",
+                    VALUES (@ProductId, @FileName)",
                     new { ProductId = productId, FileName = $"product-{productId}.png" }
                 );
                 
                 // Add two alternative images with PNG extension
                 _connection.Execute(
                     @"INSERT INTO ProductImages (ProductId, FileName)
-                     VALUES (@ProductId, @FileName)",
+                    VALUES (@ProductId, @FileName)",
                     new { ProductId = productId, FileName = $"product-{productId}-alt1.png" }
                 );
                 
                 _connection.Execute(
                     @"INSERT INTO ProductImages (ProductId, FileName)
-                     VALUES (@ProductId, @FileName)",
+                    VALUES (@ProductId, @FileName)",
                     new { ProductId = productId, FileName = $"product-{productId}-alt2.png" }
                 );
             }

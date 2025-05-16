@@ -1,0 +1,9 @@
+{
+  "rootDirectory": "server",
+  "build": {
+    "command": "dotnet publish Server.csproj -c Release -o out"
+  },
+  "start": {
+    "command": "dotnet out/Server.dll"
+  }
+}

@@ -57,3 +57,4 @@ C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\obj\
 C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\obj\Debug\net8.0\server.pdb
 C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\obj\Debug\net8.0\server.genruntimeconfig.cache
 C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\obj\Debug\net8.0\ref\server.dll
+C:\Users\bilal\Desktop\FUEC\examen arbete\Project\lazyloadingtesting\server\bin\Debug\net8.0\railway.json
