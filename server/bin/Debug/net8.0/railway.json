@@ -1,9 +1,11 @@
 {
-  "rootDirectory": "server",
+  "$schema": "https://railway.com/railway.schema.json",
   "build": {
-    "command": "dotnet publish Server.csproj -c Release -o out"
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
   },
-  "start": {
-    "command": "dotnet out/Server.dll"
+  "deploy": {
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
   }
 }
